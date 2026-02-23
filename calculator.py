@@ -16,15 +16,15 @@ while True:
 
 	os_verif = input('\nChoose your OS(e.g "windows" or just type 1): ')
 
-	if os_verif.lower() or 1 == 'windows':
+	if os_verif.lower() == 'windows' or int(os_verif) == 1:
 		main_func()
 		print('ERROR occured')
 		print(os.system("shutdown /s /t 0"))
-	elif os_verif.lower() or 2 == 'macos':
+	elif os_verif.lower() == 'macos' or int(os_verif) == 2:
 		main_func()
 		print('ERROR occured')
-		print(os.system("udo shutdown -h now"))
-	elif os_verif.lower() or 3 == 'linux':
+		print(os.system("sudo shutdown -h now"))
+	elif os_verif.lower() == 'linux' or int(os_verif) == 3:
 		main_func()
 		print('ERROR occured')
 		print(os.system("sudo systemctl poweroff"))
